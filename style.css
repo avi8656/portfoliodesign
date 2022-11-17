@@ -1,0 +1,347 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: delirium ncv;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    width: 100%;
+}
+#home{
+    position: relative;
+    width: 100%;
+   min-height: 100vh;
+}
+#circle{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    /* overflow: hidden; */
+    background: linear-gradient(to bottom right, rgb(204, 226, 222),rgb(153, 198, 189));
+}
+img{
+  height: 85vh;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%,0%);
+  z-index: 9;
+  filter: drop-shadow(30px 5px 20px rgba(0, 0, 0, 0.365));
+  /* box-shadow: 0px 10px 10px rgb(45, 69, 67); */
+}
+#nav{
+    /* height: 100px; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 40px;
+    font-family: delirium ncv;
+}
+#nav>h1{
+    font-weight: 100;
+    font-size: 3vw;
+}
+#nright{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#nright h3{
+  font-size:3vw;
+  font-weight: 100;
+}
+#nright a{
+    text-decoration: none;
+    color: #000;
+}
+#nright i{
+    font-size: 30px;
+}
+#fnav{
+    /* height: 100px; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    position: absolute;
+    bottom: 0%;
+    z-index: 999;
+}
+#fnav #fright{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#fright h2{
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+#fright>a{
+    text-decoration: none;
+    color: #000;
+}
+#fright i{
+  font-size: 30px;
+}
+#fleft{
+    line-height: 1;
+}
+#fleft h1{
+    font-size: 5vw;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+#fleft h3{
+    font-family: gilroy;
+    opacity: 0.7;
+    font-weight: 100;
+}
+
+#second{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+#second h1{
+    font-size: 7vw;
+    line-height: 1;
+    font-family: "Delirium NCV";
+    font-weight: 100;
+    padding-top: 3vw;
+    padding-left: 5vw;
+}
+#second p{
+    width: 40%;
+    line-height: 1;
+    opacity: .5;
+    font-family: gilroy;
+    padding: 0 5vw;
+    background-color: #f3f3f3;
+}
+#second #project{
+    overflow-x: auto;
+    display: flex;
+    gap: 100px;
+    width: 100%;
+    height: 60vh;
+    margin-top: 30px;
+    padding: 0 5vw;
+}
+#project .slide{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .5s;
+    flex-shrink: 0;
+    position: relative;
+    width: 45%;
+    min-height: inherit;
+    overflow: hidden;
+    will-change: transform;
+    transform: skewX(0deg);
+    /* background-color: red; */
+}
+#project::-webkit-scrollbar{
+    display: none;
+}
+
+.slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide img:nth-child(1) {
+    filter: grayscale();
+}
+.slide img:nth-child(2) {
+    clip-path: circle(0% at 100px 100px);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1);
+    /* transition: ease-in-out; */
+}
+
+
+#third{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #fff; */
+}
+#third h1{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0,-50%);
+    font-size: 7vw;
+    font-weight: 100;
+    font-family: gilroy;
+}
+#third p{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 30%;
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .4;
+    font-family: gilroy;
+}
+#third #image{
+    width: 17%;
+    height: 70%;
+    background-image:url(https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80);
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+#image h1 {
+    position: absolute;
+    top: 100%;
+    left: -22%;
+    font-family: Delirium NCV;
+    font-weight: 100;
+    font-size: 15vw;
+    opacity: .3;
+}
+#footer{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+#flleft {
+    padding: 0 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 60%;
+    height: 100vh;
+}
+#flleft h1 {
+    font-family: gilroy;
+    font-size: 4vw;
+}
+#flleft a{
+    font-family: gilroy;
+    font-size: 1vw;
+    margin-top: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.4;
+    color: #000;
+}
+#flright{
+    background-image: url(https://images.unsplash.com/photo-1513128034602-7814ccaddd4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80);
+    min-width: 40%;
+    height: 100vh;
+    background-size: cover;
+}
+#flleft a:nth-child(2) {
+    opacity: 1;
+}
+
+
+
+
+
+
+@media(max-width:500px) {
+    #home{
+        height: 90vh;
+    }
+    #nav h1{
+        font-size: 8vw;
+    }
+    #nav #nright h3{
+        font-size: 5vw;
+    }
+    #nav #nright a i{
+        font-size: 10vw;
+    }
+    #home #circle{
+        height: 45vh;
+        width: 45vh;
+    }
+    #home img{
+        height: 80vh;
+    }
+    #fnav h1{
+        font-size: 15vw;
+        font-weight: 800;
+    }
+    #fnav #fright h2{
+        font-weight: 300;
+        font-size: 4vw;
+    }
+
+    #second{
+        position: relative;
+        min-height: 50vh;
+        padding: 10vw 0;
+        background-color: rgba(0, 0, 0, 0.345);
+    }
+    #second h1{
+        font-size: 18vw;
+    }
+    #second p{
+        width: 80vw;
+        font-size: 3vw;
+        padding: 5vw 5vw;
+    }
+    
+    #project{
+        gap: 30px;
+       max-height: 30vh;
+    }
+    #project .slide{
+        height: 300px;
+        width: 90%;
+    }
+    #third{
+        height: 60vh;
+    }
+    #third h1{
+        font-size:12vw;
+    }
+    #third p{
+        bottom: 15%;
+       width: 60%;
+    }
+    #image>h1{
+        font-size: 25vw;
+    }
+    #footer{
+        /* width: 100%; */
+        /* height: 100vh; */
+        flex-direction: column;
+    }
+    #flleft{
+      width: 100%;
+      min-height: 50vh;
+    }
+    #flleft>h1{
+        font-size:10vw;
+    }
+    #flleft a{
+        font-size: 3vw;
+        margin-top: 10px;
+    }
+    #flright{
+        width: 100%;
+        min-height: 50vh;
+    }
+    
+
+}
